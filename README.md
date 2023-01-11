@@ -32,3 +32,10 @@ generative model that is similar to the one described in
 Additionally, this repository also contains implementations of the **DRAW
 model and the ConvolutionalDRAW** model both described by Gregor et al.
 
+
+
+# eivinas
+
+notes on installation:
+-create conda environment with python 3.10
+-install most things through conda and pip where needed (latest versions seem to be fine)

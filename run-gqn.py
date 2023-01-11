@@ -122,7 +122,9 @@ if __name__ == '__main__':
                  pause=Events.ITERATION_COMPLETED, step=Events.ITERATION_COMPLETED)
 
     # Tensorbard writer
-    writer = SummaryWriter(log_dir=args.log_dir)
+    from pathlib import Path
+    from datetime import datetime
+    writer = SummaryWriter(log_dir = Path(args.log_dir) / datetime.now().strftime("%m_%d-%H_%M"))
 
     @trainer.on(Events.ITERATION_COMPLETED)
     def log_metrics(engine):
